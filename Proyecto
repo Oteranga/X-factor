@@ -1,4 +1,7 @@
+import math 
 def multiplicacion(x):
   return x*5
 x=int(input("Ingresa un número"))
 print(multiplicacion(7))
+def area-circulo(x):
+  pi*x**2
