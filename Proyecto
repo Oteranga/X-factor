@@ -1,7 +1,17 @@
-import math 
-def multiplicacion(x):
-  return x*5
-x=int(input("Ingresa un número"))
-print(multiplicacion(7))
-def area-circulo(x):
-  pi*x**2
+def pitagch(x,y):
+  return (x**2 - y**2)**(1/2)
+
+print("Operaciones disponibles : ")
+    # Despues de aqui se ponen las funciones que se han creado
+print("Pitagoras")
+ope=input("¿Que operación deseas realizar? : ")
+
+if ope == "Pitagoras":
+    type_of_pitagoras = input("¿Trabajaremos con dos catetos o con un cateto y una hipotenusa? (escribe cc o ch) : ")
+    if type_of_pitagoras == "ch":
+        c = float(input("Dime el cateto : "))
+        h = float(input("Dime la hipotenusa : "))
+        rpta = pitagch(h,c)
+        
+print(f"La respuesta es : {rpta}")
+
