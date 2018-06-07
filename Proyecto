@@ -1,4 +1,4 @@
 def multiplicacion(x):
   return x*5
 x=int(input("Ingresa un número"))
-print(multiplicacion)
+print(multiplicacion(7))
