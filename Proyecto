@@ -4,14 +4,16 @@ def pitagch(x,y):
 print("Operaciones disponibles : ")
     # Despues de aqui se ponen las funciones que se han creado
 print("Pitagoras")
-ope=input("¿Que operación deseas realizar? : ")
+operacion=input("¿Que operación deseas realizar? : ")
 
-if ope == "Pitagoras":
+if operacion == "Pitagoras":
     type_of_pitagoras = input("¿Trabajaremos con dos catetos o con un cateto y una hipotenusa? (escribe cc o ch) : ")
     if type_of_pitagoras == "ch":
         c = float(input("Dime el cateto : "))
         h = float(input("Dime la hipotenusa : "))
         rpta = pitagch(h,c)
-        
+    elif type_of_pitagoras== "cc":
+        c=float(input("Dime el cateto : "))
+        c=float(input("Dime el cateto : "))
 print(f"La respuesta es : {rpta}")
 
