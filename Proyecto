@@ -1,21 +1,33 @@
 def pitagch(x,y):
-    return (x**2 - y**2)**(1/2)
+    return ((x**2 - y**2)**(1/2))
 
 def pitagcc(x,y):
-    return (x**2 + y**2)**(1/2)
+    return ((x**2 + y**2)**(1/2))
 
-def cak(x,y):
-    return(x+273)
+def cak(x):
+    return (x+273)
     
-def kac(x,y):
-    return(y-273)
+def kac(x):
+    return (x-273)
     
+def fac(x):
+    return ((9*x/5)+32)
+    
+def caf(x):
+    return ((x-32)*5/9)
+    
+def kaf(x):
+    return (((x-273)-32)*5/9)
+    
+def fak(x):
+    return (((9*x/5)+32)+273)
+
 reset = 0
 print("Operaciones disponibles : ")
     # Despues de aqui se ponen las funciones que se han creado
 print("Pitágoras")
 print("Conversión de temperatura")
-operacion=input("¿Que operación deseas realizar? : ")
+operacion=input("¿Que operación deseas realizar? Por favor escribir como indican las opciones: ")
 
 if operacion == "Pitágoras":
     while reset == 0:
@@ -36,8 +48,16 @@ if operacion == "Pitágoras":
 print(f"La respuesta es  {rpta}")
 
 if operacion== "Conversión de temperatura":
-    temp=input("¿Estás usando celsius y kelvin?, ¿estás usando celsius y fahrenheit?, ¿estás usando fahrenheit y kelvin? (Marcar ck, cf o fk): ")
-    
-    if temp==ck:
+    temp=input("¿Qué temperatura tienes? (Celsius:c, kelvin:k, fahrenheit:f): ")
+    while reset==0:
+        if temp==c:
+            a=input("¿A qué lo quieres pasar? (Kelvin:k, fahrenheit:f): ")
+            
+        if temp==k:
+            a=input("¿A qué lo quieres pasar? (Celsius:c, fahrenheit:f): ")
+            
+        if temp==f:
+            a=input("¿A qué lo quieres pasar? (Kelvin:k, fahrenheit:f): ")
+            
         
 
