@@ -6,30 +6,35 @@ def pitagcc(x,y):
 
 def cak(x):
     return (x+273)
-    
+
 def kac(x):
     return (x-273)
-    
+
 def fac(x):
     return ((9*x/5)+32)
-    
+
 def caf(x):
     return ((x-32)*5/9)
-    
+
 def kaf(x):
     return (((x-273)-32)*5/9)
-    
+
 def fak(x):
     return (((9*x/5)+32)+273)
+
+def heron(x,y,z):
+    s = (x+y+z)/2
+    return (s*(s-a)*(s-b)*(s-c))**(1/2)
 
 reset = 0
 print("Operaciones disponibles : ")
     # Despues de aqui se ponen las funciones que se han creado
-print("Pitágoras")
-print("Conversión de temperatura")
+print(" -Teorema de Pitágoras")
+print(" -Conversión de temperatura")
+print(" -Fórmula de Herón")
 operacion=input("¿Que operación deseas realizar? Por favor escribir como indican las opciones: ")
 
-if operacion == "Pitágoras":
+if operacion == "Teorema de Pitágoras":
     while reset == 0:
         type_of_pitagoras = input("¿Trabajaremos con dos catetos o con un cateto y una hipotenusa? (Escribe cc o ch) : ")
         if type_of_pitagoras == "ch":
@@ -45,19 +50,24 @@ if operacion == "Pitágoras":
         else:
             print ("Porfavor limitarse a responder con las opciones dadas")
             reset = 0
-print(f"La respuesta es  {rpta}")
+
 
 if operacion== "Conversión de temperatura":
     temp=input("¿Qué temperatura tienes? (Celsius:c, kelvin:k, fahrenheit:f): ")
     while reset==0:
         if temp==c:
             a=input("¿A qué lo quieres pasar? (Kelvin:k, fahrenheit:f): ")
-            
+
         if temp==k:
             a=input("¿A qué lo quieres pasar? (Celsius:c, fahrenheit:f): ")
-            
+
         if temp==f:
             a=input("¿A qué lo quieres pasar? (Kelvin:k, fahrenheit:f): ")
-            
-        
 
+if operacion=="Fórmula de Herón":
+    a = int(input("Dime uno de los lados de el triángulo : "))
+    b = int(input("Dime otro de los lados de el triángulo : "))
+    c = int(input("Dime el último lado de el triángulo : "))
+    rpta = heron(a,b,c)
+
+print(f"La respuesta es  {rpta}")
