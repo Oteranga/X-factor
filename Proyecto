@@ -48,21 +48,52 @@ if operacion == "Teorema de Pitágoras":
             rpta = pitagcc(c1,c2)
             reset = 1
         else:
-            print ("Porfavor limitarse a responder con las opciones dadas")
+            print ("Por favor limitarse a responder con las opciones dadas")
             reset = 0
 
 
 if operacion== "Conversión de temperatura":
     temp=input("¿Qué temperatura tienes? (Celsius:c, kelvin:k, fahrenheit:f): ")
     while reset==0:
-        if temp==c:
+        if temp== "c":
             a=input("¿A qué lo quieres pasar? (Kelvin:k, fahrenheit:f): ")
-
+            if a=="k":
+                t=float(input("Dime la temperatura en Celsius: "))
+                rpta=cak(t)
+                reset=1
+            if a=="f":
+                t=float(input("Dime la temperatura en Celsius: "))
+                rpta=caf(t)
+                reset=1
+            else:
+                print("Por favor limitarse a responder con las opciones dadas")
+                reset=0
         if temp==k:
             a=input("¿A qué lo quieres pasar? (Celsius:c, fahrenheit:f): ")
-
+            if a=="c":
+                t=float(input("Dime la temperatura en Kelvin: "))
+                rpta=kac(t)
+                reset=1
+            if a=="f":
+                t=float(input("Dime la temperatura en Kelvin: "))
+                rpta=kaf(t)
+                reset=1
+            else:
+                print("Por favor limitarse a responder con las opciones dadas")
+                reset=0
         if temp==f:
-            a=input("¿A qué lo quieres pasar? (Kelvin:k, fahrenheit:f): ")
+            a=input("¿A qué lo quieres pasar? (Kelvin:k, celsius:c): ")
+            if a=="k":
+                t=float(input("Dime la temperatura en Fahrenheit: "))
+                rpta=fak(t)
+                reset=1
+            if a=="c":
+                t=float(input("Dime la temperatura en Fahrenheit: "))
+                rpta=fac(t)
+                reset=1
+            else:
+                print ("Porfavor limitarse a responder con las opciones dadas")
+                reset = 0
 
 if operacion=="Fórmula de Herón":
     a = int(input("Dime uno de los lados de el triángulo : "))
