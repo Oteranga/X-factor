@@ -1,4 +1,7 @@
 vim: syntax=python 
+import.math
+math.pi
+
 def pitagch(x,y):
     return ((x**2 - y**2)**(1/2))
 
@@ -26,6 +29,16 @@ def fak(x):
 def heron(x,y,z):
     s = (x+y+z)/2
     return (s*(s-a)*(s-b)*(s-c))**(1/2)
+
+def AreaRectangulo (base, altura):
+    return (base * altura)
+
+def AreaCircunferencia (radio):
+    return (2*pi*(radio**2))
+
+def AreaCilindro (radio, altura)
+    a = (2*radio*altura*pi)+(2*(pi*(radio**2)))
+    return (a) 
 
 reset = 0
 print("Operaciones disponibles : ")
@@ -103,3 +116,23 @@ if operacion=="Fórmula de Herón":
     rpta = heron(a,b,c)
 
 print(f"La respuesta es  {rpta}")
+
+if operacion == "Area Rectangulo":
+    base = float(input("Ingrese la base del rectangulo="))
+    altura = float(input("Ingrese la altura del rectangulo="))
+    rpta = AreaRectangulo(base, altura)
+    
+print ("La respuesta es {rpta}")
+
+if operacion == "Area Circunferencia":
+    radio = float(input("Ingrese el radio de la circunferencia=")
+    rpta = AreaCircunferencia(radio)
+                  
+print("La respuesta es {rpta}")            
+                  
+if operacion == "Area Cilindro":
+    radio = float(input("Ingrese el radio del cilindro=")
+    altura = float(input("Ingrese la altura del cilindro=")
+    rpta = AreaCilindro (radio, altura)
+
+print("La respuesta es {rpta}")                  
