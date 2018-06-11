@@ -46,6 +46,9 @@ print("Operaciones disponibles : ")
 print(" -Teorema de Pitágoras")
 print(" -Conversión de temperatura")
 print(" -Fórmula de Herón")
+print(" -Área circunferencia")
+print(" -Área cilindro")
+print(" -Área rectángulo")
 operacion=input("¿Que operación deseas realizar? Por favor escribir como indican las opciones: ")
 
 if operacion == "Teorema de Pitágoras":
@@ -115,24 +118,18 @@ if operacion=="Fórmula de Herón":
     c = int(input("Dime el último lado de el triángulo : "))
     rpta = heron(a,b,c)
 
-print(f"La respuesta es  {rpta}")
+if operacion == "Área rectángulo":
+    base = float(input("Ingrese la base del rectangulo: "))
+    altura = float(input("Ingrese la altura del rectangulo: "))
+    rpta = AreaRectangulo(base, altura)   
 
-if operacion == "Area Rectangulo":
-    base = float(input("Ingrese la base del rectangulo="))
-    altura = float(input("Ingrese la altura del rectangulo="))
-    rpta = AreaRectangulo(base, altura)
-    
-print ("La respuesta es {rpta}")
-
-if operacion == "Area Circunferencia":
-    radio = float(input("Ingrese el radio de la circunferencia=")
+if operacion == "Área circunferencia":
+    radio = float(input("Ingrese el radio de la circunferencia: ")
     rpta = AreaCircunferencia(radio)
-                  
-print("La respuesta es {rpta}")            
-                  
-if operacion == "Area Cilindro":
-    radio = float(input("Ingrese el radio del cilindro=")
-    altura = float(input("Ingrese la altura del cilindro=")
+                                         
+if operacion == "Área cilindro":
+    radio = float(input("Ingrese el radio del cilindro: ")
+    altura = float(input("Ingrese la altura del cilindro: ")
     rpta = AreaCilindro (radio, altura)
 
 print("La respuesta es {rpta}")                  
